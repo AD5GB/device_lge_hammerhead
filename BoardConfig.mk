@@ -114,10 +114,10 @@ TARGET_KERNEL_CONFIG := wicked_hammerhead_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
 
 # Build with Oracle Java.  OpenJDK is crash-o-matic under heavy loading
-ORACLE_JDK7 := true
+#ORACLE_JDK7 := true
 
 # ROM toolchain
-TARGET_GCC_VERSION := 4.9-uber
+#TARGET_GCC_VERSION := 4.9-uber
 
 # Custom Kernel Toolchain
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
@@ -131,6 +131,9 @@ KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilt/$(HOST_OS)-x86_64/toolchain/L
 
 # Create changelog
 #VALIDUS_CHANGELOG := true
+
+# Build with compressed odex!
+WITH_DEXPREOPT_COMP=true
 
 # Multi-rom?
 NO_BLOCK_OTA := true
