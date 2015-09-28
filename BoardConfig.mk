@@ -110,6 +110,11 @@ BOARD_SEPOLICY_DIRS += \
 TARGET_KERNEL_CONFIG := cyanogenmod_hammerhead_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
 
+#ORACLE_JDK7 := true
+#TARGET_GCC_VERSION := 4.9-uber
+
+# Build with compressed odex!
+WITH_DEXPREOPT_COMP=true
 # The list below is order dependent
 BOARD_SEPOLICY_UNION += \
        app.te \
